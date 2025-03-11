@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Interactive Task Manager</string>
+    <string name="on_boarding_title_1">Build Better Workspace</string>
+    <string name="on_boarding_title_2">Manage Your Tasks</string>
+    <string name="on_boarding_title_3">Get Things Done</string>
+    <string name="on_boarding_description_1">Create a workspace that works for you, with a powerful tool to manage your tasks.</string>
+    <string name="on_boarding_description_2">Manage your tasks with ease, and keep track of your progress.</string>
+    <string name="on_boarding_description_3">Stay focused and get things done with a powerful tool to manage your tasks.</string>
+</resources>

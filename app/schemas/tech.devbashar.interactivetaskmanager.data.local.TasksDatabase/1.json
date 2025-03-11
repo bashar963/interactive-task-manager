@@ -1,0 +1,92 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "827931deb4ac0732698bc4db99f9b9e9",
+    "entities": [
+      {
+        "tableName": "tasks",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `title` TEXT NOT NULL, `description` TEXT, `isCompleted` INTEGER NOT NULL, `createdAt` INTEGER NOT NULL, `dueDate` INTEGER, `priority` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isCompleted",
+            "columnName": "isCompleted",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dueDate",
+            "columnName": "dueDate",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "priority",
+            "columnName": "priority",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '827931deb4ac0732698bc4db99f9b9e9')"
+    ],
+    "setup": {
+      "inserts": [
+        {
+          "tableName": "tasks",
+          "values": [
+            {"id": null, "title": "Complete Project Proposal", "description": "Draft and finalize the project proposal for the client meeting", "isCompleted": 0, "createdAt": 1700000000000, "dueDate": 1700086400000, "priority": "HIGH"}
+          ]
+        },
+        {
+          "tableName": "tasks",
+          "values": [
+            {"id": null, "title": "Team Meeting", "description": "Weekly sync with the development team", "isCompleted": 0, "createdAt": 1700000000000, "dueDate": 1700057600000, "priority": "MEDIUM"}
+          ]
+        },
+        {
+          "tableName": "tasks",
+          "values": [
+            {"id": null, "title": "Review Code", "description": null, "isCompleted": 1, "createdAt": 1699913600000, "dueDate": 1699999999999, "priority": "LOW"}
+          ]
+        }
+      ]
+    }
+  }
+}
